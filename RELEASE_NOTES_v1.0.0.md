@@ -46,6 +46,39 @@
 >
 > 这是分发方式限制，不是文件损坏。后续拿到 Developer ID 证书并公证后会更新安装包。
 
+## 🖥 Windows / Linux（Electron 跨平台版 0.1.0）
+
+> ⚠️ **这是另一条产品线，不是同一个版本号。** 下面的安装包来自独立的 Electron 跨平台项目
+> （`MTPasteProUniform`），版本 **0.1.0**；上面的 macOS 原生版是 **1.0.0**。Electron 版采用
+> Electron + JSON 本地存储，目标是三平台 UI / 交互一致，**尚不包含**原生版的 SQLCipher 加密、
+> WCDB / MMKV 存储、图钉板等能力，属于实验性版本，功能仍在迭代。macOS 用户请用上面的
+> `PastePro-1.0.0.dmg`。
+
+| 平台 | 文件 | 大小 |
+|:---|:---|:---|
+| Windows x64 | [NSIS 安装版 `.exe`](https://github.com/sunyazhou13/MTPastePro-Releases/releases/download/v1.0.0/PastePro-0.1.0-win-x64-setup.exe) | 124.7 MB |
+| Windows x64 | [免安装绿色版 `.zip`](https://github.com/sunyazhou13/MTPastePro-Releases/releases/download/v1.0.0/PastePro-0.1.0-win-x64.zip) | 157.1 MB |
+| Linux x86_64 | [AppImage](https://github.com/sunyazhou13/MTPastePro-Releases/releases/download/v1.0.0/PastePro-0.1.0-linux-x86_64.AppImage)（`chmod +x` 后直接运行） | 129.6 MB |
+| Linux x86_64 | [Debian / Ubuntu `.deb`](https://github.com/sunyazhou13/MTPastePro-Releases/releases/download/v1.0.0/PastePro-0.1.0-linux-amd64.deb) | 104.7 MB |
+| Linux arm64 | [AppImage](https://github.com/sunyazhou13/MTPastePro-Releases/releases/download/v1.0.0/PastePro-0.1.0-linux-arm64.AppImage) | 130.9 MB |
+| Linux arm64 | [`.deb`](https://github.com/sunyazhou13/MTPastePro-Releases/releases/download/v1.0.0/PastePro-0.1.0-linux-arm64.deb)（RK3576 / Debian 13 开发板已实测） | 99.5 MB |
+
+**SHA-256**
+
+```
+88dd1897fb15a522091ff91ff80e87be4692261e0a46b02e67d308e011dc1b4c  PastePro-0.1.0-win-x64-setup.exe
+4b07ad320296b8cb8df01ca749c1fbb571ba416bf3723c96a04422339fc2db78  PastePro-0.1.0-win-x64.zip
+2f8333e5ab235084c7640cd1641712fdaa2b3358a574b1e9f0487ccc1445240c  PastePro-0.1.0-linux-x86_64.AppImage
+7162eeaadaadabcfe598fea466b0514eef7f42891711a6efe39003f7d0f5191c  PastePro-0.1.0-linux-amd64.deb
+fb0ee53f97c21e30ea151257ebb8d28d3d3b224161cb61af302661043cc6bbad  PastePro-0.1.0-linux-arm64.AppImage
+7a786bf004d435e47b32302ff43776f52e486d2f742c11d65f8272138fcaf7eb  PastePro-0.1.0-linux-arm64.deb
+```
+
+**Linux 使用提示**：「选中即粘贴」会按 `xdotool` → 内置 `x11-inject.py`（python3 + libXtst，零安装）→
+`wtype` → `ydotool` 依次探测；X11 下剪贴板写入还有内置 `clip-set.py` 兜底，解决 Chromium 失焦后
+拒发剪贴板的问题。**纯 Wayland 会话下 XTEST 不生效**，需 `wtype` / `ydotool`；这些工具全不可用时
+仍可复制内容后手动粘贴。deb 安装时会自动修 `chrome-sandbox` 的 setuid 权限。
+
 ## ⌨️ 快捷键速查
 
 | 动作 | 快捷键 |

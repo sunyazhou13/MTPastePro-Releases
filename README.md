@@ -17,6 +17,23 @@
 | 文件大小 | 7,300,608 B ≈ 7.0 MB |
 | SHA-256 | `f05dc003e07bab8e5ad65f029f20dc2892e866717e6150e1811279fab2cfa332` |
 
+## 🖥 Windows / Linux（实验性）
+
+另有一套 **Electron 跨平台版 0.1.0**，由独立项目 `MTPasteProUniform` 构建，目标是三平台 UI / 交互一致。
+⚠️ 它与上面的 macOS 原生版 **1.0.0 不是同一套实现**：采用 Electron + JSON 存储，
+**暂不含** SQLCipher 加密、WCDB / MMKV、图钉板等能力，功能仍在迭代。
+
+完整说明与 SHA-256 见 [v1.0.0 Release 正文](https://github.com/sunyazhou13/MTPastePro-Releases/releases/tag/v1.0.0)。
+
+| 平台 | 下载 |
+|:---|:---|
+| Windows x64 | [NSIS 安装版](https://github.com/sunyazhou13/MTPastePro-Releases/releases/download/v1.0.0/PastePro-0.1.0-win-x64-setup.exe) · [免安装 zip](https://github.com/sunyazhou13/MTPastePro-Releases/releases/download/v1.0.0/PastePro-0.1.0-win-x64.zip) |
+| Linux x86_64 | [AppImage](https://github.com/sunyazhou13/MTPastePro-Releases/releases/download/v1.0.0/PastePro-0.1.0-linux-x86_64.AppImage) · [deb](https://github.com/sunyazhou13/MTPastePro-Releases/releases/download/v1.0.0/PastePro-0.1.0-linux-amd64.deb) |
+| Linux arm64 | [AppImage](https://github.com/sunyazhou13/MTPastePro-Releases/releases/download/v1.0.0/PastePro-0.1.0-linux-arm64.AppImage) · [deb](https://github.com/sunyazhou13/MTPastePro-Releases/releases/download/v1.0.0/PastePro-0.1.0-linux-arm64.deb) |
+
+> Linux 上「选中即粘贴」会自动在 `xdotool` / 内置 XTEST 注入 / `wtype` / `ydotool` 之间挑可用的；
+> 纯 Wayland 或工具全缺时仍可复制后手动粘贴。
+
 ## 安装
 
 1. 打开 DMG，把 `PastePro.app` 拖进「应用程序」。
