@@ -12,10 +12,15 @@
 
 | 项 | 值 |
 |---|---|
-| 版本 | 1.0.0 (build 2) |
-| 系统要求 | macOS 14.0 (Sonoma) 或更高，Apple Silicon / Intel |
-| 文件大小 | 7,300,608 B ≈ 7.0 MB |
-| SHA-256 | `f05dc003e07bab8e5ad65f029f20dc2892e866717e6150e1811279fab2cfa332` |
+| 版本 | 1.0.0 (build 3) |
+| 系统要求 | macOS 14.0 (Sonoma) 或更高，Apple Silicon / Intel（Universal 2） |
+| 文件大小 | 8,170,496 B ≈ 7.8 MB |
+| SHA-256 | `01accbb34797882034b29ca215d9842a0c90fffa93dd874e6df929813eb2ba67` |
+
+> **2026-11-05 更新（同版本 1.0.0 / build 3）**：DMG 已重新打包覆盖，**下载链接不变**。
+> 修掉方向切换整屏跳页、删除卡片滚回页首、打开面板滑回开头三个体验问题；
+> 外观 Tab 新增「记住上次操作的位置」开关（默认关闭）与高清 App 图标预览。
+> Windows / Linux Electron 版 0.1.0 未变动。
 
 ## 🖥 Windows / Linux（实验性）
 
