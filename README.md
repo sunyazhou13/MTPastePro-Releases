@@ -1,0 +1,54 @@
+# PastePro
+
+一款常驻菜单栏的 macOS 剪贴板管理器。免费、无订阅、无账号，所有数据只留在本机。
+
+> 本仓库仅用于**分发构建产物与发布说明**，源码仓库暂不公开。
+
+## 下载
+
+**[下载最新版 PastePro-1.0.0.dmg](https://github.com/sunyazhou13/MTPastePro-Releases/releases/latest/download/PastePro-1.0.0.dmg)**
+
+也可以到 [Releases 页面](https://github.com/sunyazhou13/MTPastePro-Releases/releases) 查看所有版本与完整发布说明。
+
+| 项 | 值 |
+|---|---|
+| 版本 | 1.0.0 (build 2) |
+| 系统要求 | macOS 14.0 (Sonoma) 或更高，Apple Silicon / Intel |
+| 文件大小 | 7,300,608 B ≈ 7.0 MB |
+| SHA-256 | `f05dc003e07bab8e5ad65f029f20dc2892e866717e6150e1811279fab2cfa332` |
+
+## 安装
+
+1. 打开 DMG，把 `PastePro.app` 拖进「应用程序」。
+2. 首次使用需在「系统设置 → 隐私与安全性 → 辅助功能」中勾选 PastePro，否则「选中即粘贴」无法发出 ⌘V。
+3. 默认热键 **⇧⌘V** 唤起面板（被占用时自动回退 ⌥⌘V / ⌃⌘V / ⌃⌥⌘V），可在设置里改。
+
+> ⚠️ **关于签名**：本版本为 ad-hoc 签名，未经 Developer ID 签名与 Apple 公证，Gatekeeper 会提示「已损坏，无法打开」。任选一种方式处理：
+> - 终端执行 `xattr -cr /Applications/PastePro.app` 后重新打开；
+> - 或在「系统设置 → 隐私与安全性」里点「仍要打开」。
+>
+> 这是分发方式限制，不是文件损坏。
+
+## 主要功能
+
+- 自动记录 **文本 / 富文本 / 链接 / 图片 / 文件 / 颜色** 六类剪贴板内容，SHA256 去重，历史上限默认 500 条
+- 底部通栏面板：搜索、卡片流、来源 App 图标、内容主色头带、毛玻璃背景
+- 键盘翻卡（← → ↑ ↓ / 滚轮 / 触控板横滑）、⌘1–⌘9 快贴、⌘A 多选、空格 Quick Look、**长按 ⌫ / ⌦ 连续删除**
+- 多图钉板（新建 / 重命名 / 7 色标记 / 排序 / 固定）、回收站与删除撤销
+- 设置页五个 Tab，全局热键自定义 + 冲突检测
+- 数据库 SQLCipher 加密（WCDB.swift ORM），设置走 MMKV，全程无网络请求、无遥测
+
+## 已知限制
+
+- 剪贴板变更采用 0.3s 轮询，非事件驱动，极端情况下有极短延迟
+- 「选中即粘贴」依赖辅助功能权限，部分安全输入框可能拒绝模拟 ⌘V
+- 尚未实现：条目编辑与大图预览窗口、Paste Stack 粘贴栈、隐私忽略规则配置页
+- 明确不做：iCloud 同步、小组件、共享图钉板、智能建议，以及任何付费 / 许可 / 试用模块
+
+## 反馈
+
+问题与建议欢迎开 [Issue](https://github.com/sunyazhou13/MTPastePro-Releases/issues)。
+
+---
+
+© 2026 sunyazhou
