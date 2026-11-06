@@ -6,31 +6,30 @@
 
 ## 下载
 
-**[下载最新版 PastePro-1.0.1.dmg](https://github.com/sunyazhou13/MTPastePro-Releases/releases/latest/download/PastePro-1.0.1.dmg)**
+**[下载最新版 PastePro-1.0.2.dmg](https://github.com/sunyazhou13/MTPastePro-Releases/releases/latest/download/PastePro-1.0.2.dmg)**
 
 也可以到 [Releases 页面](https://github.com/sunyazhou13/MTPastePro-Releases/releases) 查看所有版本与完整发布说明。
 
 | 项 | 值 |
 |---|---|
-| 版本 | 1.0.1 (build 4) |
+| 版本 | 1.0.2 (build 5) |
 | 系统要求 | macOS 14.0 (Sonoma) 或更高，Apple Silicon / Intel（Universal 2） |
-| 文件大小 | 8,171,520 B ≈ 7.8 MB |
-| SHA-256 | `417f824c0529d8ca6d4bebb1975dacdd38b4a42ffab2851f4f226c6366429163` |
+| 文件大小 | 8,178,688 B ≈ 7.8 MB |
+| SHA-256 | `7199e3e1c1291b87de5ae6263968e481e5e5dcb91e14a0285f3c94567477a55f` |
 
-> **v1.0.1（2026-11-05）**：1.0.0 之后的维护版本。修掉方向切换整屏跳页、
-> 删除卡片滚回页首、打开面板滑回开头三个体验问题；外观 Tab 新增
-> 「记住上次操作的位置」开关（默认关闭）与高清 App 图标预览。
-> 完整说明见 [v1.0.1 Release 正文](https://github.com/sunyazhou13/MTPastePro-Releases/releases/tag/v1.0.1)。
+> **v1.0.2（2026-11-06）**：修掉唤起面板时「从上次位置滑回第一个卡片」的滚动动画，
+> 现在每次打开都是数据就绪、直接从第一张开始；1.0.1 的卡片流翻页与删除补位优化一并保留。
+> 完整说明见 [v1.0.2 Release 正文](https://github.com/sunyazhou13/MTPastePro-Releases/releases/tag/v1.0.2)。
 > Windows / Linux Electron 版 0.1.0 未变动，安装包仍挂在 v1.0.0 下。
 
 ## 🖥 Windows / Linux（实验性）
 
 另有一套 **Electron 跨平台版 0.1.0**，由独立项目 `MTPasteProUniform` 构建，目标是三平台 UI / 交互一致。
-⚠️ 它与上面的 macOS 原生版 **1.0.1 不是同一套实现**：采用 Electron + JSON 存储，
+⚠️ 它与上面的 macOS 原生版 **1.0.2 不是同一套实现**：采用 Electron + JSON 存储，
 **暂不含** SQLCipher 加密、WCDB / MMKV、图钉板等能力，功能仍在迭代。
 安装包仍挂在 [v1.0.0](https://github.com/sunyazhou13/MTPastePro-Releases/releases/tag/v1.0.0) 下，链接不变。
 
-完整说明与 SHA-256 见 [v1.0.1 Release 正文](https://github.com/sunyazhou13/MTPastePro-Releases/releases/tag/v1.0.1)。
+完整说明与 SHA-256 见 [v1.0.2 Release 正文](https://github.com/sunyazhou13/MTPastePro-Releases/releases/tag/v1.0.2)。
 
 | 平台 | 下载 |
 |:---|:---|
